@@ -1,0 +1,38 @@
+{
+    "name": "DK Logo Generater Bot",
+    "logo": "https://telegra.ph/file/ce8924f5e156b6ab30979.jpg",
+    "description": "A Beautiful API Based Logo Generator Bot Developed By DK Bots 🇱🇰 corporation ©",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org.",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org.",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Get this value from @BotFather.",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "12"
+            }
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
